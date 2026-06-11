@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
+import ScrambleText from "@/components/ScrambleText";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -35,15 +35,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <Image
-              src="/logo.png"
-              alt="Unsucck Marketing"
-              width={50}
-              height={40}
-              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              priority
-            />
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center">
+              <span className="text-deep-bg font-bold text-sm">U</span>
+            </div>
+            <span className="text-lg font-bold tracking-tight group-hover:scale-[1.02] transition-transform duration-300">
+              <ScrambleText text="Unsucck Marketing" className="brand-shimmer" />
+            </span>
           </Link>
 
           {/* Desktop Nav */}

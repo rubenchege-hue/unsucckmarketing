@@ -266,6 +266,13 @@ body {
   100% { background-position: 200% 0; }
 }
 
+@keyframes brand-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -304,6 +311,22 @@ body {
 }
 
 /* ── Shimmer loading effect for cards ── */
+.brand-shimmer {
+  background: linear-gradient(
+    270deg,
+    var(--color-neon-cyan),
+    var(--color-neon-purple),
+    var(--color-neon-magenta),
+    var(--color-neon-cyan),
+    var(--color-neon-purple)
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: brand-shimmer 5s ease-in-out infinite;
+}
+
 .shimmer-card {
   background: linear-gradient(
     135deg,
