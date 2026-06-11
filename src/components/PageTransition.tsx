@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const pageVariants = {
+const pageVariants: Variants = {
   initial: {
     opacity: 0,
     y: 20,
@@ -15,16 +15,16 @@ const pageVariants = {
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.1, 0.25, 1] as const,
+      ease: [0.43, 0.13, 0.23, 0.96] as const,
     },
   },
   exit: {
     opacity: 0,
-    y: -10,
+    y: -20,
     scale: 0.98,
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.1, 0.25, 1] as const,
+      ease: [0.43, 0.13, 0.23, 0.96] as const,
     },
   },
 };
