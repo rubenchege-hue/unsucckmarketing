@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import ScrambleText from "@/components/ScrambleText";
+import Image from "next/image";
 
 const footerLinks = {
   Services: [
@@ -34,13 +34,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 group mb-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center">
-                <span className="text-deep-bg font-bold text-sm">U</span>
-              </div>
-              <span className="text-lg font-bold group-hover:scale-[1.02] transition-transform duration-300">
-                <ScrambleText text="Unsucck Marketing" className="brand-shimmer" />
-              </span>
+            <Link href="/" className="flex items-center group mb-4">
+              <Image
+                src="/logo.png"
+                alt="Unsucck Marketing"
+              width={62}
+              height={50}
+              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
             <p className="text-text-muted text-xs leading-relaxed mb-4">
               Marketing audit agency based in <span className="text-text-secondary font-medium">Nairobi, Kenya</span>.
