@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import CursorGlow from "@/components/CursorGlow";
 import PageTransition from "@/components/PageTransition";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
+import { OrganizationSchema } from "@/lib/json-ld";
 import "./globals.css";
 
 const inter = Inter({
@@ -46,8 +48,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: OrganizationSchema() }}
+        />
         <div className="scanline" />
         <CursorGlow />
+        <WhatsAppWidget />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>

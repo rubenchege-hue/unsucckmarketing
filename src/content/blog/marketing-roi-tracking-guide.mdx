@@ -1,0 +1,108 @@
+---
+title: "How to Actually Track Marketing ROI (Without the Headache)"
+description: "Stop guessing which channels are working. A practical guide to setting up marketing ROI tracking that gives you clear, actionable data — without the spreadsheet nightmares."
+publishedAt: "2026-05-01"
+author: "Ruben"
+authorRole: "Founder & Lead Auditor"
+tags: ["Analytics", "Marketing Strategy", "ROI"]
+readingTime: "10 min read"
+image: "/blog/roi-tracking.jpg"
+---
+
+Most businesses don't know their true marketing ROI. They *think* they do, but when we dig into their data, we usually find:
+
+- **Double-counted conversions**
+- **Unattributed revenue**
+- **Vanity metrics hiding real problems**
+
+Here's how to fix it.
+
+## Step 1: Define What "ROI" Means for You
+
+Before you track anything, you need clarity on what you're measuring.
+
+### The Simple Formula
+
+```
+ROI = (Revenue Attributed to Marketing - Marketing Cost) / Marketing Cost × 100
+```
+
+But the *real* question is: what counts as marketing cost? Do you include:
+
+- Salaries and agency fees?
+- Software subscriptions?
+- Content production costs?
+- Overhead?
+
+**Be consistent.** Pick a definition and stick with it.
+
+## Step 2: Set Up Proper Attribution
+
+### The Attribution Models
+
+There's no single "right" attribution model — it depends on your business:
+
+| Model | Best For | Caveat |
+|-------|----------|--------|
+| First Touch | Brand awareness campaigns | Ignored nurture efforts |
+| Last Touch | Direct response | Undervalues top-of-funnel |
+| Linear | B2B with long cycles | Assumes equal impact |
+| Data-Driven | High-volume e-commerce | Requires lots of data |
+| **Custom** | **Most businesses** | **Takes work to set up** |
+
+### Our Recommendation
+
+Use a **custom multi-touch attribution** model. It's the most accurate for most businesses:
+
+```javascript
+// Example: Weighted attribution logic
+function calculateAttribution(touchpoints) {
+  const weights = {
+    first: 0.3,   // Awareness gets 30%
+    middle: 0.2,  // Consideration gets 20% each
+    last: 0.3     // Conversion gets 30%
+  }
+  // Apply weights to your touchpoints
+}
+```
+
+> "Good attribution is better than perfect attribution. Don't let perfectionism stop you from starting."
+
+## Step 3: Build Your Dashboard
+
+### The Metrics That Matter
+
+**Forget vanity metrics.** Track these instead:
+
+1. **Cost per Acquired Customer (CAC)** — Total cost / new customers
+2. **Customer Lifetime Value (LTV)** — Avg revenue per customer × retention period
+3. **LTV:CAC Ratio** — Should be 3:1 or higher
+4. **Payback Period** — Time to recover CAC
+5. **Channel-Level ROAS** — Revenue per channel / cost per channel
+
+## Step 4: Common Pitfalls to Avoid
+
+### Pitfall 1: Mixing Time Periods
+
+Don't compare one month of spend against six months of attributed revenue. **Align your time windows.**
+
+### Pitfall 2: Ignoring Organic & Earned
+
+Just because you didn't pay for it directly doesn't mean it's free. Content marketing, SEO, and word-of-mouth all have costs (time, tools, salaries).
+
+### Pitfall 3: Not Tracking What Happens *After* the Sale
+
+Retention marketing is often more profitable than acquisition. **Track post-purchase behavior** — upsells, referrals, repeat purchases.
+
+## The Minimum Viable Tracking Setup
+
+If you're starting from zero, here's what you need:
+
+1. **Google Analytics 4** — Free, essential for web traffic
+2. **UTM Parameters** — Track source, medium, campaign, content
+3. **CRM Integration** — Connect leads and revenue back to campaigns
+4. **Monthly Reconciliation** — Compare platform data against actual revenue
+
+---
+
+*Not sure if your tracking is working? [Book a free audit](/contact) and we'll review your setup in 30 minutes.*
